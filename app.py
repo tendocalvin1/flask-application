@@ -38,8 +38,11 @@ def user():
     
 @app.route('/logout')
 def logout():
+    if 'user' in session:
+        user = session['user']
+        flash("You have been logged out successfully, {user}!", 'info')
     session.pop('user', None) # This removes the user data from the sessions
-    flash("You have been logged out successfully!", 'info')
+    
     return redirect(url_for('login'))
     
 
