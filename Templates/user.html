@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Home page for the Embedded Systems Project{% endblock %}
+{%block content%}
+<h1>My Project</h1>
+{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Home Page for the Embedded Systems Project</title>
+    
+</head>
+<body>
+    <h1>Embedded Systems Project</h1>
+    <p>Hello !</p>
+   
+    {% for x in content %}
+        <p>{{x}}</p>
+    {% endfor%}
+</body>
+</html>
